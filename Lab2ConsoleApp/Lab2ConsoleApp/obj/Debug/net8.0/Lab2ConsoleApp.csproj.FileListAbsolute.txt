@@ -1,0 +1,14 @@
+D:\Dev\C#\Lab2ConsoleApp\Lab2ConsoleApp\bin\Debug\net8.0\Lab2ConsoleApp.exe
+D:\Dev\C#\Lab2ConsoleApp\Lab2ConsoleApp\bin\Debug\net8.0\Lab2ConsoleApp.deps.json
+D:\Dev\C#\Lab2ConsoleApp\Lab2ConsoleApp\bin\Debug\net8.0\Lab2ConsoleApp.runtimeconfig.json
+D:\Dev\C#\Lab2ConsoleApp\Lab2ConsoleApp\bin\Debug\net8.0\Lab2ConsoleApp.dll
+D:\Dev\C#\Lab2ConsoleApp\Lab2ConsoleApp\bin\Debug\net8.0\Lab2ConsoleApp.pdb
+D:\Dev\C#\Lab2ConsoleApp\Lab2ConsoleApp\obj\Debug\net8.0\Lab2ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\C#\Lab2ConsoleApp\Lab2ConsoleApp\obj\Debug\net8.0\Lab2ConsoleApp.AssemblyInfoInputs.cache
+D:\Dev\C#\Lab2ConsoleApp\Lab2ConsoleApp\obj\Debug\net8.0\Lab2ConsoleApp.AssemblyInfo.cs
+D:\Dev\C#\Lab2ConsoleApp\Lab2ConsoleApp\obj\Debug\net8.0\Lab2ConsoleApp.csproj.CoreCompileInputs.cache
+D:\Dev\C#\Lab2ConsoleApp\Lab2ConsoleApp\obj\Debug\net8.0\Lab2ConsoleApp.dll
+D:\Dev\C#\Lab2ConsoleApp\Lab2ConsoleApp\obj\Debug\net8.0\refint\Lab2ConsoleApp.dll
+D:\Dev\C#\Lab2ConsoleApp\Lab2ConsoleApp\obj\Debug\net8.0\Lab2ConsoleApp.pdb
+D:\Dev\C#\Lab2ConsoleApp\Lab2ConsoleApp\obj\Debug\net8.0\Lab2ConsoleApp.genruntimeconfig.cache
+D:\Dev\C#\Lab2ConsoleApp\Lab2ConsoleApp\obj\Debug\net8.0\ref\Lab2ConsoleApp.dll
