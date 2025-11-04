@@ -1,0 +1,91 @@
+﻿// See https://aka.ms/new-console-template for more information
+// write a console program that asks the user for their age as a string and then calculates and displays what their age will be in5 years.
+using System.ComponentModel;
+using System.Linq.Expressions;
+using Lab3ConsoleApp;
+
+Console.Write("Enter your age: ");
+string? input = Console.ReadLine();
+
+if (string.IsNullOrWhiteSpace(input))
+{
+    Console.WriteLine("No input provided.");
+    return;
+}
+
+if (!int.TryParse(input.Trim(), out int age))
+{
+    Console.WriteLine("Invalid age input.");
+    return;
+}
+
+int futureAge = age + 5;
+Console.WriteLine($"In5 years, you will be {futureAge} years old.");
+
+// Task2 : Create a small program that
+//• Declares variables for price and quantity.
+//• Calculates the total = price * quantity.
+//• Applies a10% discount if total exceeds1000.
+//• Print both total and discounted total using expressions inside string interpolation
+
+double price = 1200.50; // price per unit
+int quantity = 9; // number of units
+
+double total = price * quantity; // calculate total as double
+double discountedTotal = total > 1000 ? total * 0.9 : total; // apply discount if applicable
+
+
+Console.WriteLine($"Total: {total:0.00}");
+Console.WriteLine($"Discounted total: {discountedTotal:0.00}");
+
+// Task3 :Write a program to:
+//• Declare a string sentence = "C# is Powerful and Fun!"
+//• Convert it to lowercase, uppercase, and get its length.
+//• Use string interpolation to print:
+//• Original: ...
+//• Uppercase: ...
+//• Lowercase: ...
+//• Length: ...
+ 
+string sentence = "C# is Powerful and Fun!";
+string lower = sentence.ToLower();
+string upper = sentence.ToUpper();
+int length = sentence.Length;
+
+Console.WriteLine($"Original: {sentence}");
+Console.WriteLine($"Uppercase: {upper}");
+Console.WriteLine($"Lowercase: {lower}");
+Console.WriteLine($"Length: {length}");
+
+//Task4: Guid, DateTime, and TimeSpan Challenge
+//Write a program that:
+//• Creates a new order with a unique Guid ID.
+//• Stores the current time in a DateTime variable.
+//• Adds a TimeSpan of48 hours to simulate a delivery time.
+//• Prints the order ID, order date, and expected delivery date.
+
+Guid orderId = Guid.NewGuid();
+DateTime orderDate = DateTime.Now;
+TimeSpan deliveryTime = TimeSpan.FromHours(48);
+DateTime expectedDeliveryDate = orderDate.Add(deliveryTime);
+Console.WriteLine($"Order ID: {orderId}");
+Console.WriteLine($"Order Date: {orderDate}");
+Console.WriteLine($"Expected Delivery Date: {expectedDeliveryDate}");
+
+// Task5: Working with Reference Types
+// Create a class Book with fields Title, Author, Price.
+// Then create two objects book1 and book2, assign book2 = book1, modify book2.Price,
+// and print both books' details to show that reference types share the same memory reference.
+
+Book book1 = new Book("The C# Guide", "Jane Doe", 29.99);
+Book book2 = book1; // both variables reference the same object
+book2.Price = 19.99; // modify via book2
+
+Console.WriteLine("Book1 details:");
+book1.PrintDetails();
+Console.WriteLine("Book2 details:");
+book2.PrintDetails();
+
+
+
+

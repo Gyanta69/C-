@@ -1,0 +1,11 @@
+﻿// See https://aka.ms/new-console-template for more information
+// Task2: Arithmetic Expressions and Blocks
+
+double price =120.50; // price per unit
+int quantity =9; // number of units
+
+double total = price * quantity; // calculate total
+
+// Print total and discounted total using expressions inside string interpolation
+Console.WriteLine($"Total: {price * quantity:0.00}");
+Console.WriteLine($"Discounted total: {(price * quantity >1000 ? price * quantity *0.9 : price * quantity):0.00}");

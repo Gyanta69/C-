@@ -1,0 +1,150 @@
+﻿// See https://aka.ms/new-console-template for more information
+// write a console program that asks the user for their age as a string and then calculates and displays what their age will be in5 years.
+using Lab3ConsoleApp;
+using System.ComponentModel;
+using System.Linq.Expressions;
+using System.Runtime.Intrinsics.X86;
+
+Console.Write("Enter your age: ");
+string? input = Console.ReadLine();
+
+if (string.IsNullOrWhiteSpace(input))
+{
+    Console.WriteLine("No input provided.");
+    return;
+}
+
+if (!int.TryParse(input.Trim(), out int age))
+{
+    Console.WriteLine("Invalid age input.");
+    return;
+}
+
+int futureAge = age + 5;
+Console.WriteLine($"In 5 years, you will be {futureAge} years old.");
+
+// Task2 : Create a small program that
+//• Declares variables for price and quantity.
+//• Calculates the total = price * quantity.
+//• Applies a10% discount if total exceeds1000.
+//• Print both total and discounted total using expressions inside string interpolation
+
+double price = 120.50; // price per unit
+int quantity = 9; // number of units
+
+double total = price * quantity; // calculate total as double
+double discountedTotal = total > 1000 ? total * 0.9 : total; // apply discount if applicable
+
+
+Console.WriteLine($"Total: {total:0.00}");
+Console.WriteLine($"Discounted total: {discountedTotal:0.00}");
+
+// Task3 :Write a program to:
+//• Declare a string sentence = "C# is Powerful and Fun!"
+//• Convert it to lowercase, uppercase, and get its length.
+//• Use string interpolation to print:
+//• Original: ...
+//• Uppercase: ...
+//• Lowercase: ...
+//• Length: ...
+ 
+string sentence = "C# is Powerful and Fun!";
+string lower = sentence.ToLower();
+string upper = sentence.ToUpper();
+int length = sentence.Length;
+
+Console.WriteLine($"Original: {sentence}");
+Console.WriteLine($"Uppercase: {upper}");
+Console.WriteLine($"Lowercase: {lower}");
+Console.WriteLine($"Length: {length}");
+
+//Task4: Guid, DateTime, and TimeSpan Challenge
+//Write a program that:
+//• Creates a new order with a unique Guid ID.
+//• Stores the current time in a DateTime variable.
+//• Adds a TimeSpan of48 hours to simulate a delivery time.
+//• Prints the order ID, order date, and expected delivery date.
+
+Guid orderId = Guid.NewGuid();
+DateTime orderDate = DateTime.Now;
+TimeSpan deliveryTime = TimeSpan.FromHours(48);
+DateTime expectedDeliveryDate = orderDate.Add(deliveryTime);
+Console.WriteLine($"Order ID: {orderId}");
+Console.WriteLine($"Order Date: {orderDate}");
+Console.WriteLine($"Expected Delivery Date: {expectedDeliveryDate}");
+
+// Task5: Working with Reference Types
+// Create a class Book with fields Title, Author, Price.
+// Then create two objects book1 and book2, assign book2 = book1, modify book2.Price,
+// and print both books' details to show that reference types share the same memory reference.
+
+Book book1 = new Book("The Alchemist", "Paulo Coelho", 15.99);
+
+// book2 references the same object as book1
+Book book2 = book1;
+
+// Modify book2's price
+book2.Price = 9.99;
+
+// Display both books
+Console.WriteLine("Book 1 Details:");
+book1.PrintDetails();
+
+Console.WriteLine("\nBook 2 Details:");
+book2.PrintDetails();
+
+
+// Task 6: Nullable Type Use Case
+//Create a variable double? temperature = null;
+//• Print “Temperature not recorded” if it’s null.
+//• Otherwise print the temperature value.
+//• Then assign temperature = 36.6; and print again.
+double? temperature = null;
+if (temperature == null)
+{
+    Console.WriteLine("Temperature not recorded");
+}
+else
+{
+    Console.WriteLine($"Temperature: {temperature}");
+}
+temperature = 36.6;
+Console.WriteLine($"Temperature: {temperature}");
+
+//Task 7: Generic Collection Mini App
+//Create a simple inventory system:
+//• Use a List<string> to store product names.
+//• Add, remove, and print products.
+//• Again Create a empty Dictionary.
+//• Use a Dictionary<string, int> to map each product name to its quantity.
+//• Print all products and their stock count using foreach.
+List<string> products = new List<string>();
+products.Add("Laptop");
+products.Add("Smartphone");
+products.Add("Tablet");
+products.Add("Headphones");
+Console.WriteLine("Products in Inventory:");
+foreach (var product in products)
+{
+    Console.WriteLine(product);
+}
+
+products.Remove("Tablet");
+Console.WriteLine("\nProducts after removal:");
+foreach (var product in products)
+{
+    Console.WriteLine(product);
+}
+Console.WriteLine("\nProduct Stock Counts:");
+Dictionary<string, int> productStock = new Dictionary<string, int>();
+productStock["Laptop"] = 10;
+productStock["Smartphone"] = 25;
+foreach (var kvp in productStock)
+{
+    Console.WriteLine($"Product: {kvp.Key}, Stock: {kvp.Value}");
+}
+
+
+
+
+

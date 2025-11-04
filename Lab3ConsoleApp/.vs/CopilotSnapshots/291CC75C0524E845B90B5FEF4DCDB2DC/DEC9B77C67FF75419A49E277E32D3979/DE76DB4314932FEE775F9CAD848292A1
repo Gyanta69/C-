@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab3ConsoleApp
+{
+    internal class Book
+    {
+        // Task 5: Working with Reference Types
+        //Create a class Book with fields:
+        //• Title, Author, Price.
+        //Then:
+        //• Create two objects book1 and book2.
+        //• Assign book2 = book1; and modify book2.Price.
+        //• Print both books’ details to show that reference types share the same memory
+        //reference.
+        public string Title;
+        public string Author;
+        public double Price;
+
+        public Book(string title, string author, double price)
+        {
+            Title = title;
+            Author = author;
+            Price = price;
+        }
+        public void PrintDetails()
+        {
+            Console.WriteLine($"Title: {Title}, Author: {Author}, Price: {Price:0.00}");
+        }
+        public Book() { }
+    }
+}
