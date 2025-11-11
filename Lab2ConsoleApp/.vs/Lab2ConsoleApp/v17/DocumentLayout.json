@@ -38,21 +38,19 @@
               "RelativeToolTip": "Lab2ConsoleApp\\Circle.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T01:40:26.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T01:40:26.397Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Lab2ConsoleApp",
+              "Title": "Lab2ConsoleApp.csproj",
               "DocumentMoniker": "D:\\Dev\\C#\\Lab2ConsoleApp\\Lab2ConsoleApp\\Lab2ConsoleApp.csproj",
               "RelativeDocumentMoniker": "Lab2ConsoleApp\\Lab2ConsoleApp.csproj",
               "ToolTip": "D:\\Dev\\C#\\Lab2ConsoleApp\\Lab2ConsoleApp\\Lab2ConsoleApp.csproj",
               "RelativeToolTip": "Lab2ConsoleApp\\Lab2ConsoleApp.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-28T01:32:49.497Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T01:32:49.497Z"
             },
             {
               "$type": "Document",
@@ -62,10 +60,26 @@
               "RelativeDocumentMoniker": "Lab2ConsoleApp\\Program.cs",
               "ToolTip": "D:\\Dev\\C#\\Lab2ConsoleApp\\Lab2ConsoleApp\\Program.cs",
               "RelativeToolTip": "Lab2ConsoleApp\\Program.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADsAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T01:17:46.425Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{2d7728c2-de0a-45b5-99aa-89b609dfde73}"
             }
           ]
         }

@@ -1,0 +1,15 @@
+D:\Dev\C#\Lab4ConsoleApp\Lab4ConsoleApp\obj\Debug\net9.0\Lab4ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\C#\Lab4ConsoleApp\Lab4ConsoleApp\obj\Debug\net9.0\Lab4ConsoleApp.AssemblyInfoInputs.cache
+D:\Dev\C#\Lab4ConsoleApp\Lab4ConsoleApp\obj\Debug\net9.0\Lab4ConsoleApp.AssemblyInfo.cs
+D:\Dev\C#\Lab4ConsoleApp\Lab4ConsoleApp\obj\Debug\net9.0\Lab4ConsoleApp.csproj.CoreCompileInputs.cache
+D:\Dev\C#\Lab4ConsoleApp\Lab4ConsoleApp\obj\Debug\net9.0\Lab4ConsoleApp.sourcelink.json
+D:\Dev\C#\Lab4ConsoleApp\Lab4ConsoleApp\bin\Debug\net9.0\Lab4ConsoleApp.exe
+D:\Dev\C#\Lab4ConsoleApp\Lab4ConsoleApp\bin\Debug\net9.0\Lab4ConsoleApp.deps.json
+D:\Dev\C#\Lab4ConsoleApp\Lab4ConsoleApp\bin\Debug\net9.0\Lab4ConsoleApp.runtimeconfig.json
+D:\Dev\C#\Lab4ConsoleApp\Lab4ConsoleApp\bin\Debug\net9.0\Lab4ConsoleApp.dll
+D:\Dev\C#\Lab4ConsoleApp\Lab4ConsoleApp\bin\Debug\net9.0\Lab4ConsoleApp.pdb
+D:\Dev\C#\Lab4ConsoleApp\Lab4ConsoleApp\obj\Debug\net9.0\Lab4ConsoleApp.dll
+D:\Dev\C#\Lab4ConsoleApp\Lab4ConsoleApp\obj\Debug\net9.0\refint\Lab4ConsoleApp.dll
+D:\Dev\C#\Lab4ConsoleApp\Lab4ConsoleApp\obj\Debug\net9.0\Lab4ConsoleApp.pdb
+D:\Dev\C#\Lab4ConsoleApp\Lab4ConsoleApp\obj\Debug\net9.0\Lab4ConsoleApp.genruntimeconfig.cache
+D:\Dev\C#\Lab4ConsoleApp\Lab4ConsoleApp\obj\Debug\net9.0\ref\Lab4ConsoleApp.dll
