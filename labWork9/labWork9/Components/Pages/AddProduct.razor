@@ -1,0 +1,115 @@
+@page "/add-product"
+@inject ProductStore ProductStore
+@inject NavigationManager Navigation
+
+<PageTitle>Add Product</PageTitle>
+
+<h1>Add New Product</h1>
+
+<EditForm Model="@product" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group mb-3">
+        <label for="name" class="form-label">Product Name <span class="text-danger">*</span></label>
+        <InputText id="name" class="form-control" @bind-Value="product.Name" />
+        <ValidationMessage For="@(() => product.Name)" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="description" class="form-label">Description</label>
+        <InputTextArea id="description" class="form-control" @bind-Value="product.Description" rows="3" />
+        <ValidationMessage For="@(() => product.Description)" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="price" class="form-label">Price <span class="text-danger">*</span></label>
+        <InputNumber id="price" class="form-control" @bind-Value="product.Price" />
+        <ValidationMessage For="@(() => product.Price)" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="category" class="form-label">Category <span class="text-danger">*</span></label>
+        <InputText id="category" class="form-control" @bind-Value="product.Category" />
+        <ValidationMessage For="@(() => product.Category)" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="stock" class="form-label">Stock Quantity</label>
+        <InputNumber id="stock" class="form-control" @bind-Value="product.Stock" />
+        <ValidationMessage For="@(() => product.Stock)" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="image" class="form-label">Product Image</label>
+        <InputFile id="image" class="form-control" OnChange="HandleImageSelected" accept="image/*" />
+        @if (!string.IsNullOrEmpty(imagePreview))
+        {
+            <div class="mt-2">
+                <img src="@imagePreview" alt="Product preview" class="img-thumbnail" style="max-width: 300px; max-height: 300px;" />
+                <button type="button" class="btn btn-sm btn-danger ms-2" @onclick="ClearImage">Remove Image</button>
+            </div>
+        }
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary me-2">Add Product</button>
+        <button type="button" class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+    </div>
+</EditForm>
+
+@code {
+    private Product product = new();
+    private string? imagePreview;
+
+    private async Task HandleImageSelected(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+        if (file != null)
+        {
+            // Validate file size (max 5MB)
+            const long maxFileSize = 5 * 1024 * 1024; // 5MB
+            if (file.Size > maxFileSize)
+            {
+                // You could show an error message here
+                return;
+            }
+
+            // Validate file type
+            if (!file.ContentType.StartsWith("image/"))
+            {
+                // You could show an error message here
+                return;
+            }
+
+            // Read file and convert to base64
+            using var memoryStream = new MemoryStream();
+            await file.OpenReadStream(maxAllowedSize: maxFileSize).CopyToAsync(memoryStream);
+            var imageBytes = memoryStream.ToArray();
+            product.ImageBase64 = Convert.ToBase64String(imageBytes);
+            product.ImageContentType = file.ContentType;
+
+            // Create preview
+            imagePreview = $"data:{product.ImageContentType};base64,{product.ImageBase64}";
+        }
+    }
+
+    private void ClearImage()
+    {
+        product.ImageBase64 = null;
+        product.ImageContentType = null;
+        imagePreview = null;
+    }
+
+    private void HandleValidSubmit()
+    {
+        ProductStore.AddProduct(product);
+        Navigation.NavigateTo("/products");
+    }
+
+    private void Cancel()
+    {
+        Navigation.NavigateTo("/products");
+    }
+}
+

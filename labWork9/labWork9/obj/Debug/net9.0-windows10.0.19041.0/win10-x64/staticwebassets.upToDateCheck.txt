@@ -1,0 +1,8 @@
+wwwroot\css\app.css
+wwwroot\css\bootstrap\bootstrap.min.css
+wwwroot\css\bootstrap\bootstrap.min.css.map
+wwwroot\index.html
+D:\Dev\C#\labWork9\labWork9\wwwroot\css\app.css
+D:\Dev\C#\labWork9\labWork9\wwwroot\css\bootstrap\bootstrap.min.css
+D:\Dev\C#\labWork9\labWork9\wwwroot\css\bootstrap\bootstrap.min.css.map
+D:\Dev\C#\labWork9\labWork9\wwwroot\index.html
